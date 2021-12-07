@@ -9,10 +9,13 @@ projects = [{"name": "Airplane", "description": "We build airplanes", "portrait"
 links = ["/projects", "https://youtube.com"]
 
 @app.route("/")
-def hello_world():
+def get_index():
     return render_template('index.html')
 
 @app.route("/projects")
 def get_projects():
-
     return render_template('projects.html', projects=projects)
+
+@app.route("/siteinfo")
+def get_siteinfo():
+    return render_template('siteinfo.html')
